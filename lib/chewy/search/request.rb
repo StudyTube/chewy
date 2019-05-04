@@ -978,6 +978,7 @@ module Chewy
         ActiveSupport::Notifications.instrument 'search_query.chewy',
           notification_payload(request: request_body) do
             begin
+              request_body = request_body.merge(rest_total_hits_as_int: true)
               Chewy.client.search(request_body)
             rescue Elasticsearch::Transport::Transport::Errors::NotFound
               {}
