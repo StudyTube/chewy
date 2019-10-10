@@ -35,4 +35,5 @@ Gem::Specification.new do |spec| # rubocop:disable BlockLength
   spec.add_dependency 'activesupport', '>= 4.0'
   spec.add_dependency 'elasticsearch', '>= 7.0.0'
   spec.add_dependency 'elasticsearch-dsl'
+  spec.add_dependency 'faraday', '>= 0.17.0'
 end
